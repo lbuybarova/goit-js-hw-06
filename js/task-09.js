@@ -8,8 +8,8 @@ const body = document.body
 
 btnEl.addEventListener("click", changeColor);
 
-function changeColor (){
+function changeColor() {
   let color = getRandomHexColor()
-body.style.backgroundColor = color;
-text.textContent = color
+  body.style.backgroundColor = color;
+  text.textContent = color
 }
