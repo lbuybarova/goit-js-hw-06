@@ -6,16 +6,34 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ulList=document.getElementById("ingredients");
 
-ingredients.forEach((element)=>{
 
-  const elementLi = document.createElement("li");
+onst ingredientsEl = document.querySelector("#ingredients");
 
-  elementLi.classList.add("item");
+const makeItem = (ingredient) => {
+  return ingredient.map((element) => {
+    const itemEl = document.createElement("li");
+    itemEl.textContent = element;
+    itemEl.classList.add("item");
 
-  elementLi.textContent = element;
+    return itemEl;
+  });
+};
 
-  ulList.append(elementLi);
+const ingredient = makeItem(ingredients);
+ingredientsEl.append(...ingredient);
 
-});
+
+// const ulList=document.getElementById("ingredients");
+
+// ingredients.forEach((element)=>{
+
+//   const elementLi = document.createElement("li");
+
+//   elementLi.classList.add("item");
+
+//   elementLi.textContent = element;
+
+//   ulList.append(elementLi);
+
+// });
